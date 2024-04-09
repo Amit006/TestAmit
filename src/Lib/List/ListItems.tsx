@@ -52,10 +52,10 @@ function ListItems() {
                             spacing={{ xs: 1, sm: 2, md: 4 }}
                         >
                             <Wrapper>
-                                <Item props={dataItems[0]}></Item>
+                                <Item info={dataItems[0]} ></Item>
                             </Wrapper>
-                            <Wrapper> <Item props={dataItems[1]}></Item></Wrapper>
-                            <Wrapper> <Item props={dataItems[2]}></Item></Wrapper>
+                            <Wrapper> <Item info={dataItems[1]} ></Item></Wrapper>
+                            <Wrapper> <Item info={dataItems[2]}></Item></Wrapper>
                         </Stack>
                     )
                 )

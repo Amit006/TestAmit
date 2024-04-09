@@ -30,13 +30,13 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function Item(props: any) {
+export default function Item(props:any) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  const { info } = props;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -50,19 +50,19 @@ export default function Item(props: any) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={props?.business_title}
-        subheader={props?.civil_service_title}
+        title={info?.business_title}
+        subheader={info?.civil_service_title}
       />
       <CardContent>
         <Typography variant="body1" color="text.secondary">
-        {props?.residency_requirement}
+        {info?.residency_requirement}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label={props?.to_apply}>
+        <IconButton aria-label={info?.to_apply}>
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label={props?.hours_shift}>
+        <IconButton aria-label={info?.hours_shift}>
           <ShareIcon />
         </IconButton>
         <ExpandMore
@@ -82,7 +82,7 @@ export default function Item(props: any) {
             aside for 10 minutes.
           </Typography>
           <Typography paragraph>
-          {props?.residency_requirement}
+          {info?.residency_requirement}
           </Typography>
           <Typography paragraph>
             Add rice and stir very gently to distribute. Top with artichokes and
@@ -93,7 +93,7 @@ export default function Item(props: any) {
             minutes more. (Discard any mussels that don&apos;t open.)
           </Typography>
           <Typography>
-            {props?.job_category}
+            {info?.job_category}
           </Typography>
         </CardContent>
       </Collapse>
